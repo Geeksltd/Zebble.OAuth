@@ -50,9 +50,7 @@
         {
             get
             {
-                if (Authenticator1 != null)
-                    return Authenticator1.AuthorizeUrl.AbsoluteUri;
-                else if (Authenticator2 != null)
+                if (Authenticator2 != null)
                     return Authenticator2.AuthorizeUrl.AbsoluteUri;
                 return string.Empty;
             }
@@ -61,43 +59,14 @@
         {
             get
             {
-                if (Authenticator1 != null)
-                    return Authenticator1.AccessTokenUrl.AbsoluteUri;
-                else if (Authenticator2 != null)
+                if (Authenticator2 != null)
                     return Authenticator2.AccessTokenUrl.AbsoluteUri;
                 return string.Empty;
             }
         }
 
-        public string ConsumerKey
-        {
-            get
-            {
-                if (Authenticator1 != null)
-                    return Authenticator1.ConsumerKey;
-                return string.Empty;
-            }
-        }
-        public string ConsumerSecret
-        {
-            get
-            {
-                if (Authenticator1 != null)
-                    return Authenticator1.ConsumerSecret;
-                return string.Empty;
-            }
-        }
-        public string RequestTokenUrl
-        {
-            get
-            {
-                if (Authenticator1 != null)
-                    return Authenticator1.RequestTokenUrl.AbsoluteUri;
-                return string.Empty;
-            }
-        }
-
 #endif
+
         public OAuth(string clientId, string scope, string authorizeURL, string redirectURL)
         {
             Authenticator2 = new OAuth2Authenticator(clientId, scope, new Uri(authorizeURL), new Uri(redirectURL));
@@ -161,7 +130,7 @@
             Request2?.AddMultipartData(name, data, mimeType, filename);
         }
 
-        private void Authenticator_Completed(object sender, AuthenticatorCompletedEventArgs e)
+        void Authenticator_Completed(object sender, AuthenticatorCompletedEventArgs e)
         {
             AuthCompleted.Raise(new AuthCompletedEventArgs { Account = (OAuthAccount)e.Account, IsAuthenticated = e.IsAuthenticated });
         }

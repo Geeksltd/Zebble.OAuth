@@ -1,4 +1,4 @@
-[logo]: https://raw.githubusercontent.com/Geeksltd/Zebble.OAuth/master/Shared/NuGet/Icon.png "Zebble.OAuth"
+﻿[logo]: https://raw.githubusercontent.com/Geeksltd/Zebble.OAuth/master/icon.png "Zebble.OAuth"
 
 
 ## Zebble.OAuth
