@@ -7,7 +7,7 @@
     <RootNamespace>Zebble</RootNamespace>
     <PackageId>Zebble.OAuth</PackageId>
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <Version>1.1.103</Version>
+    <Version>1.1.104.0</Version>
     <PackOnBuild>true</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>default</LangVersion>
@@ -28,7 +28,7 @@
     <Authors>Geeks Ltd</Authors>
     <Copyright>Geeks Ltd 2020, All rights reserved.</Copyright>
     <DisableExtraReferences>true</DisableExtraReferences>
-	<!-- There is a validation error related to Android Compat packages, this is a temporarily workaround -->
+    <!-- There is a validation error related to Android Compat packages, this is a temporarily workaround -->
     <XamarinAndroidSupportSkipVerifyVersions>true</XamarinAndroidSupportSkipVerifyVersions>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
@@ -71,8 +71,8 @@
     <PackageReference Include="Zebble" Version="4.5.423" />
   </ItemGroup>
   <ItemGroup>
-	<Folder Include="Android\" />
-	<Folder Include="iOS\" />
-	<Folder Include="UWP\" />
+    <Folder Include="Android\" />
+    <Folder Include="iOS\" />
+    <Folder Include="UWP\" />
   </ItemGroup>
 </Project>
